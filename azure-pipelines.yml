@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
 
 jobs:
-- job: Test iOS
+- job: Test_iOS
   pool:
     vmImage: 'macOS-10.14'
   strategy:
