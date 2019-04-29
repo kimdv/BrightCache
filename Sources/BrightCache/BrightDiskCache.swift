@@ -9,7 +9,7 @@
 import Foundation
 import BrightFutures
 
-final class BrightDiskCache<Object: Cachable>: Cache {
+final public class BrightDiskCache<Object: Cachable>: Cache {
     let fileManager = FileManager.default
 
     let path: String
@@ -28,7 +28,7 @@ final class BrightDiskCache<Object: Cachable>: Cache {
         try createDirectoryIfNeeded()
     }
 
-    func cache(_ object: Object) -> Future<Void, BrightCacheError> {
+    public func cache(_ object: Object) -> Future<Void, BrightCacheError> {
         let promise = Promise<Void, BrightCacheError>()
 
         queue.async {
@@ -50,7 +50,7 @@ final class BrightDiskCache<Object: Cachable>: Cache {
         return promise.future
     }
 
-    func fetchObject(for key: String) -> Future<Object, BrightCacheError> {
+    public func fetchObject(for key: String) -> Future<Object, BrightCacheError> {
         let promise = Promise<Object, BrightCacheError>()
 
         queue.async {
@@ -72,7 +72,7 @@ final class BrightDiskCache<Object: Cachable>: Cache {
         return promise.future
     }
 
-    func removeObject(for key: String) -> Future<Void, BrightCacheError> {
+    public func removeObject(for key: String) -> Future<Void, BrightCacheError> {
         let promise = Promise<Void, BrightCacheError>()
 
         queue.async {
@@ -90,7 +90,7 @@ final class BrightDiskCache<Object: Cachable>: Cache {
         return promise.future
     }
 
-    func removeObject(_ object: Object) -> Future<Void, BrightCacheError> {
+    public func removeObject(_ object: Object) -> Future<Void, BrightCacheError> {
         return removeObject(for: object.cacheKey)
     }
 

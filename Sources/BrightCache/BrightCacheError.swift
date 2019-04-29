@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum BrightCacheError: Error {
+public enum BrightCacheError: Error {
     case failedToWriteToDisk
     case failedToEncode
     case failedToDecode

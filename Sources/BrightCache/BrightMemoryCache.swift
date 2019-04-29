@@ -9,27 +9,27 @@
 import Foundation
 import BrightFutures
 
-final class BrightMemoryCache<Object: Cachable>: Cache {
+final public class BrightMemoryCache<Object: Cachable>: Cache {
     private let memoryCache = NSCache<NSString, MemoryWrapper>()
 
-    func cache(_ object: Object) -> Future<Void, BrightCacheError> {
+    public func cache(_ object: Object) -> Future<Void, BrightCacheError> {
         memoryCache.setObject(MemoryWrapper(object: object), forKey: object.cacheKey as NSString)
         return Future.completed()
     }
 
-    func fetchObject(for key: String) -> Future<Object, BrightCacheError> {
+    public func fetchObject(for key: String) -> Future<Object, BrightCacheError> {
         guard let object = memoryCache.object(forKey: key as NSString)?.object as? Object
             else { return Future(error: .objectNotFound) }
 
         return Future(value: object)
     }
 
-    func removeObject(for key: String) -> Future<Void, BrightCacheError> {
+    public func removeObject(for key: String) -> Future<Void, BrightCacheError> {
         memoryCache.removeObject(forKey: key as NSString)
         return Future.completed()
     }
 
-    func removeObject(_ object: Object) -> Future<Void, BrightCacheError> {
+    public func removeObject(_ object: Object) -> Future<Void, BrightCacheError> {
         return removeObject(for: object.cacheKey)
     }
 }

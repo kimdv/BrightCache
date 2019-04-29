@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Cachable: Codable {
+public protocol Cachable: Codable {
     var cacheKey: String { get }
 }

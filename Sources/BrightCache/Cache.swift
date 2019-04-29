@@ -9,7 +9,7 @@
 import Foundation
 import BrightFutures
 
-protocol Cache {
+public protocol Cache {
     associatedtype Object
 
     func cache(_ object: Object) -> Future<Void, BrightCacheError>
