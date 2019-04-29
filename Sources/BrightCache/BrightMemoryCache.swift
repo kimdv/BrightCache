@@ -9,7 +9,7 @@
 import Foundation
 import BrightFutures
 
-final public class BrightMemoryCache<Object: Cachable>: Cache {
+public final class BrightMemoryCache<Object: Cachable>: Cache {
     private let memoryCache = NSCache<NSString, MemoryWrapper>()
 
     public func cache(_ object: Object) -> Future<Void, BrightCacheError> {

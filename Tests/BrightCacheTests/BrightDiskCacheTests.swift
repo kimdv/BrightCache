@@ -21,7 +21,7 @@ final class BrightDiskCacheTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        cache = try! BrightDiskCache<User>()
+        cache = try! BrightDiskCache<User>() // swiftlint:disable:this force_try
     }
 
     func testInitDiskCache() throws {
@@ -72,7 +72,6 @@ final class BrightDiskCacheTests: XCTestCase {
         let object = User(cacheKey: "1", name: "Test 1")
         _ = cache.cache(object).forced()
         let result = cache.fetchObject(for: "1").forced()
-
 
         XCTAssertNil(result.error)
         XCTAssertEqual(result.value, object)

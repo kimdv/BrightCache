@@ -9,7 +9,7 @@
 import Foundation
 import BrightFutures
 
-final public class BrightDiskCache<Object: Cachable>: Cache {
+public final class BrightDiskCache<Object: Cachable>: Cache {
     let fileManager = FileManager.default
 
     let path: String
