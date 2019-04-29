@@ -1,0 +1,31 @@
+# Xcode
+# Build, test, and archive an Xcode workspace on macOS.
+# Add steps that install certificates, test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
+
+jobs:
+- job: Test iOS
+  pool:
+    vmImage: 'macOS-10.14'
+  strategy:
+    maxParallel: 10
+    matrix:
+      xcode102:
+        DEVELOPER_DIR: /Applications/Xcode_10.2.app
+  steps:
+  - task: Xcode@5
+    inputs:
+      actions: 'test'
+      scheme: 'BrightCache'
+      sdk: 'iphonesimulator'
+      configuration: 'Debug'
+      xcWorkspacePath: '**/BrightCache/BrightCache.xcworkspace'
+      xcodeVersion: 'specifyPath'
+      xcodeDeveloperDir: $(DEVELOPER_DIR)
+      signingOption: 'auto'
+      useXcpretty: true
+      publishJUnitResults: true
+      destinationSimulators: 'iPhone 7'
+      destinationTypeOption: 'simulators'
+      destinationPlatformOption: 'iOS'
+
