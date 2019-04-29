@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name = "BrightCache"
-  spec.version = "0.1.1"
+  spec.version = "0.1.2"
   spec.summary = "Simple cache build on top of BrightFutures "
 
   spec.homepage = "https://github.com/kimdv/BrightCache"
