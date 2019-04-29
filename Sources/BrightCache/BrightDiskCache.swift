@@ -72,6 +72,25 @@ public final class BrightDiskCache<Object: Cachable>: Cache {
         return promise.future
     }
 
+    func fetchObjects() -> Future<[Object], BrightCacheError> {
+        let promise = Promise<[Object], BrightCacheError>()
+
+        queue.async {
+            do {
+                let decoder = JSONDecoder()
+                let objects = try self.fileManager.contentsOfDirectory(atPath: self.path)
+                    .map { self.path + "/" + $0 }
+                    .compactMap(self.fileManager.contents)
+                    .map { try decoder.decode(Object.self, from: $0) }
+                promise.success(objects)
+            } catch {
+                promise.failure(.objectsNotFound)
+            }
+        }
+
+        return promise.future
+    }
+
     public func removeObject(for key: String) -> Future<Void, BrightCacheError> {
         let promise = Promise<Void, BrightCacheError>()
 

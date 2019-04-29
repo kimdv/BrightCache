@@ -13,5 +13,6 @@ public enum BrightCacheError: Error {
     case failedToEncode
     case failedToDecode
     case objectNotFound
+    case objectsNotFound
     case failedToRemoveFromCache
 }

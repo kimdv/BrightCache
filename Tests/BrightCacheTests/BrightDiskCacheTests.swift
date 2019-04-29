@@ -77,6 +77,18 @@ final class BrightDiskCacheTests: XCTestCase {
         XCTAssertEqual(result.value, object)
     }
 
+    func testFetchObjects() {
+        let object1 = User(cacheKey: "1", name: "Test 1")
+        let object2 = User(cacheKey: "2", name: "Test 2")
+
+        _ = cache.cache(object1).forced()
+        _ = cache.cache(object2).forced()
+        let result = cache.fetchObjects().forced()
+
+        XCTAssertNil(result.error)
+        XCTAssertEqual(result.value, [object1, object2])
+    }
+
     func testRemoveByKey() {
         let object = User(cacheKey: "1", name: "Test 1")
         let path = cache.createFilePath(for: "1")

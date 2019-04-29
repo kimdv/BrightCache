@@ -29,6 +29,10 @@ final class BrightCache<Object: Cachable>: Cache {
             .recoverWith { _ in self.diskCache.fetchObject(for: key) }
     }
 
+    func fetchObjects() -> Future<[Object], BrightCacheError> {
+        return diskCache.fetchObjects()
+    }
+
     func removeObject(for key: String) -> Future<Void, BrightCacheError> {
         let memoryFuture = memoryCache.removeObject(for: key)
         let diskFuture = diskCache.removeObject(for: key)
