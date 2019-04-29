@@ -12,6 +12,8 @@ import BrightFutures
 public final class BrightMemoryCache<Object: Cachable>: Cache {
     private let memoryCache = NSCache<NSString, MemoryWrapper>()
 
+    public init() { }
+
     public func cache(_ object: Object) -> Future<Void, BrightCacheError> {
         memoryCache.setObject(MemoryWrapper(object: object), forKey: object.cacheKey as NSString)
         return Future.completed()

@@ -13,7 +13,7 @@ public final class BrightCache<Object: Cachable>: Cache {
     let diskCache: BrightDiskCache<Object>
     let memoryCache = BrightMemoryCache<Object>()
 
-    init() throws {
+    public init() throws {
         diskCache = try BrightDiskCache()
     }
 

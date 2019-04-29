@@ -18,7 +18,7 @@ public final class BrightDiskCache<Object: Cachable>: Cache {
                                       qos: .userInitiated,
                                       attributes: .concurrent)
 
-    init() throws {
+    public init() throws {
         path = try fileManager.url(for: .cachesDirectory,
                                    in: .userDomainMask,
                                    appropriateFor: nil,
