@@ -13,6 +13,15 @@ jobs:
       xcode102:
         DEVELOPER_DIR: /Applications/Xcode_10.2.app
   steps:
+  - script: sudo xcode-select -switch /Applications/Xcode_10.2.app
+    displayName: Select Xcode version
+  
+  - script: xcodebuild -version
+    displayName: Xcode version
+  
+  - script: /usr/local/bin/carthage bootstrap --platform ios
+    displayName: 'Carthage installation'
+  
   - task: Xcode@5
     inputs:
       actions: 'test'
@@ -28,4 +37,3 @@ jobs:
       destinationSimulators: 'iPhone 7'
       destinationTypeOption: 'simulators'
       destinationPlatformOption: 'iOS'
-
