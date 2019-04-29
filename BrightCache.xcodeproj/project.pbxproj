@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C327426A22771EC90099DD29 /* BrightCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C327426022771EC90099DD29 /* BrightCache.framework */; };
+		C327428B22771F4C0099DD29 /* BrightCacheError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327428322771F4C0099DD29 /* BrightCacheError.swift */; };
+		C327428C22771F4C0099DD29 /* BrightMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327428422771F4C0099DD29 /* BrightMemoryCache.swift */; };
+		C327428D22771F4C0099DD29 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327428522771F4C0099DD29 /* Cache.swift */; };
+		C327428E22771F4C0099DD29 /* BrightCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327428622771F4C0099DD29 /* BrightCache.swift */; };
+		C327428F22771F4C0099DD29 /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327428722771F4C0099DD29 /* Cachable.swift */; };
+		C327429022771F4C0099DD29 /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327428822771F4C0099DD29 /* String+Hash.swift */; };
+		C327429122771F4C0099DD29 /* MemoryWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327428922771F4C0099DD29 /* MemoryWrapper.swift */; };
+		C327429222771F4C0099DD29 /* BrightDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327428A22771F4C0099DD29 /* BrightDiskCache.swift */; };
+		C3274295227720930099DD29 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3274294227720930099DD29 /* BrightFutures.framework */; };
+		C3274298227720FE0099DD29 /* Promise+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3274297227720FE0099DD29 /* Promise+Void.swift */; };
+		C327429A227721220099DD29 /* Future+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3274299227721220099DD29 /* Future+Void.swift */; };
+		C32742A02277227F0099DD29 /* BrightMemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327429C227722670099DD29 /* BrightMemoryCacheTests.swift */; };
+		C32742A1227722810099DD29 /* BrightDiskCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327429D227722670099DD29 /* BrightDiskCacheTests.swift */; };
+		C32742A8227725AF0099DD29 /* BrightCache.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C327426022771EC90099DD29 /* BrightCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C327426B22771EC90099DD29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C327425722771EC90099DD29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C327425F22771EC90099DD29;
+			remoteInfo = BrightCache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C32742A7227725AA0099DD29 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				C32742A8227725AF0099DD29 /* BrightCache.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C327426022771EC90099DD29 /* BrightCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BrightCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C327426922771EC90099DD29 /* BrightCacheTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BrightCacheTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C327427B22771EE50099DD29 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C327427F22771EE90099DD29 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C327428322771F4C0099DD29 /* BrightCacheError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightCacheError.swift; sourceTree = "<group>"; };
+		C327428422771F4C0099DD29 /* BrightMemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightMemoryCache.swift; sourceTree = "<group>"; };
+		C327428522771F4C0099DD29 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		C327428622771F4C0099DD29 /* BrightCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightCache.swift; sourceTree = "<group>"; };
+		C327428722771F4C0099DD29 /* Cachable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
+		C327428822771F4C0099DD29 /* String+Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Hash.swift"; sourceTree = "<group>"; };
+		C327428922771F4C0099DD29 /* MemoryWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryWrapper.swift; sourceTree = "<group>"; };
+		C327428A22771F4C0099DD29 /* BrightDiskCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightDiskCache.swift; sourceTree = "<group>"; };
+		C3274294227720930099DD29 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		C3274297227720FE0099DD29 /* Promise+Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Void.swift"; sourceTree = "<group>"; };
+		C3274299227721220099DD29 /* Future+Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Future+Void.swift"; sourceTree = "<group>"; };
+		C327429C227722670099DD29 /* BrightMemoryCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightMemoryCacheTests.swift; sourceTree = "<group>"; };
+		C327429D227722670099DD29 /* BrightDiskCacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightDiskCacheTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C327425D22771EC90099DD29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3274295227720930099DD29 /* BrightFutures.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C327426622771EC90099DD29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C327426A22771EC90099DD29 /* BrightCache.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C327425622771EC90099DD29 = {
+			isa = PBXGroup;
+			children = (
+				C327427A22771EE50099DD29 /* BrightCache */,
+				C327427D22771EE90099DD29 /* BrightCacheTests */,
+				C3274293227720810099DD29 /* Frameworks */,
+				C327426122771EC90099DD29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C327426122771EC90099DD29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C327426022771EC90099DD29 /* BrightCache.framework */,
+				C327426922771EC90099DD29 /* BrightCacheTests-iOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C327427A22771EE50099DD29 /* BrightCache */ = {
+			isa = PBXGroup;
+			children = (
+				C327429B2277217F0099DD29 /* Helpers */,
+				C3274296227720A90099DD29 /* Extensions */,
+				C327428622771F4C0099DD29 /* BrightCache.swift */,
+				C327428322771F4C0099DD29 /* BrightCacheError.swift */,
+				C327428A22771F4C0099DD29 /* BrightDiskCache.swift */,
+				C327428422771F4C0099DD29 /* BrightMemoryCache.swift */,
+				C327428722771F4C0099DD29 /* Cachable.swift */,
+				C327428522771F4C0099DD29 /* Cache.swift */,
+				C327427B22771EE50099DD29 /* Info.plist */,
+			);
+			name = BrightCache;
+			path = Sources/BrightCache;
+			sourceTree = "<group>";
+		};
+		C327427D22771EE90099DD29 /* BrightCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				C327429D227722670099DD29 /* BrightDiskCacheTests.swift */,
+				C327429C227722670099DD29 /* BrightMemoryCacheTests.swift */,
+				C327427F22771EE90099DD29 /* Info.plist */,
+			);
+			name = BrightCacheTests;
+			path = Tests/BrightCacheTests;
+			sourceTree = "<group>";
+		};
+		C3274293227720810099DD29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C32742A922772D4E0099DD29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3274296227720A90099DD29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C327428822771F4C0099DD29 /* String+Hash.swift */,
+				C3274297227720FE0099DD29 /* Promise+Void.swift */,
+				C3274299227721220099DD29 /* Future+Void.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C327429B2277217F0099DD29 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C327428922771F4C0099DD29 /* MemoryWrapper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C32742A922772D4E0099DD29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C3274294227720930099DD29 /* BrightFutures.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C327425B22771EC90099DD29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C327425F22771EC90099DD29 /* BrightCache-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C327427422771EC90099DD29 /* Build configuration list for PBXNativeTarget "BrightCache-iOS" */;
+			buildPhases = (
+				C327425C22771EC90099DD29 /* Sources */,
+				C327425D22771EC90099DD29 /* Frameworks */,
+				C327425B22771EC90099DD29 /* Headers */,
+				C327425E22771EC90099DD29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BrightCache-iOS";
+			productName = BrightCache;
+			productReference = C327426022771EC90099DD29 /* BrightCache.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C327426822771EC90099DD29 /* BrightCacheTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C327427722771EC90099DD29 /* Build configuration list for PBXNativeTarget "BrightCacheTests-iOS" */;
+			buildPhases = (
+				C327426522771EC90099DD29 /* Sources */,
+				C327426622771EC90099DD29 /* Frameworks */,
+				C32742A7227725AA0099DD29 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C327426C22771EC90099DD29 /* PBXTargetDependency */,
+			);
+			name = "BrightCacheTests-iOS";
+			productName = BrightCacheTests;
+			productReference = C327426922771EC90099DD29 /* BrightCacheTests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C327425722771EC90099DD29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Kim de Vos";
+				TargetAttributes = {
+					C327425F22771EC90099DD29 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					C327426822771EC90099DD29 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = C327425A22771EC90099DD29 /* Build configuration list for PBXProject "BrightCache" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C327425622771EC90099DD29;
+			productRefGroup = C327426122771EC90099DD29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C327425F22771EC90099DD29 /* BrightCache-iOS */,
+				C327426822771EC90099DD29 /* BrightCacheTests-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C327425E22771EC90099DD29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C327425C22771EC90099DD29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C327428E22771F4C0099DD29 /* BrightCache.swift in Sources */,
+				C327428B22771F4C0099DD29 /* BrightCacheError.swift in Sources */,
+				C327429A227721220099DD29 /* Future+Void.swift in Sources */,
+				C327429022771F4C0099DD29 /* String+Hash.swift in Sources */,
+				C327428F22771F4C0099DD29 /* Cachable.swift in Sources */,
+				C3274298227720FE0099DD29 /* Promise+Void.swift in Sources */,
+				C327428D22771F4C0099DD29 /* Cache.swift in Sources */,
+				C327429122771F4C0099DD29 /* MemoryWrapper.swift in Sources */,
+				C327428C22771F4C0099DD29 /* BrightMemoryCache.swift in Sources */,
+				C327429222771F4C0099DD29 /* BrightDiskCache.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C327426522771EC90099DD29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32742A02277227F0099DD29 /* BrightMemoryCacheTests.swift in Sources */,
+				C32742A1227722810099DD29 /* BrightDiskCacheTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C327426C22771EC90099DD29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C327425F22771EC90099DD29 /* BrightCache-iOS */;
+			targetProxy = C327426B22771EC90099DD29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C327427222771EC90099DD29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C327427322771EC90099DD29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C327427522771EC90099DD29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9446JZB352;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Sources/BrightCache/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.kimdevos.BrightCache;
+				PRODUCT_NAME = BrightCache;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C327427622771EC90099DD29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9446JZB352;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Sources/BrightCache/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.kimdevos.BrightCache;
+				PRODUCT_NAME = BrightCache;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C327427822771EC90099DD29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9446JZB352;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Tests/BrightCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.kimdevos.BrightCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C327427922771EC90099DD29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9446JZB352;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Tests/BrightCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.kimdevos.BrightCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C327425A22771EC90099DD29 /* Build configuration list for PBXProject "BrightCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C327427222771EC90099DD29 /* Debug */,
+				C327427322771EC90099DD29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C327427422771EC90099DD29 /* Build configuration list for PBXNativeTarget "BrightCache-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C327427522771EC90099DD29 /* Debug */,
+				C327427622771EC90099DD29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C327427722771EC90099DD29 /* Build configuration list for PBXNativeTarget "BrightCacheTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C327427822771EC90099DD29 /* Debug */,
+				C327427922771EC90099DD29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C327425722771EC90099DD29 /* Project object */;
+}
