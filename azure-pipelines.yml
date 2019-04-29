@@ -28,7 +28,7 @@ jobs:
       scheme: 'BrightCache'
       sdk: 'iphonesimulator'
       configuration: 'Debug'
-      xcWorkspacePath: '**/BrightCache/BrightCache.xcworkspace'
+      xcWorkspacePath: '**/BrightCache.xcworkspace'
       xcodeVersion: 'specifyPath'
       xcodeDeveloperDir: $(DEVELOPER_DIR)
       signingOption: 'auto'
